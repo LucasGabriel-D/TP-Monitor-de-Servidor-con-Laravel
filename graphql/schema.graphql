@@ -1,0 +1,24 @@
+type Query {
+metrics: Metrics!
+}
+type Metrics {
+hostname: String!
+os: String!
+php: String!
+disk: Disk!
+memory: Memory
+cpu_pct: Float
+uptime_s: Int
+cpu_temp_c: Float
+at: String!
+}
+type Disk {
+total_gb: Float!
+free_gb: Float!
+used_pct: Float!
+}
+type Memory {
+total_mb: Int!
+available_mb: Int!
+used_pct: Float!
+}
